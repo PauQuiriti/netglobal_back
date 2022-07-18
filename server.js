@@ -6,7 +6,7 @@ const cors = require("cors");
 const helmet = require("helmet")
 const models = require("./models/index");
 const routes = require('./routes');
-const multer = require('multer')
+
 require('dotenv').config()
 const port = process.env.PORT || 3001
 app.use(helmet())
