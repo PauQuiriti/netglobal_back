@@ -12,8 +12,6 @@ const BranchController = require('../controllers/branchController');
 const AdminController = require('../controllers/AdminController');
 const ProvinceController = require('../controllers/ProvinceController')
 const adminRoutes = require('./adminRoutes');
-const multer = require('multer');
-const upload = require('../middleware/upload');
 const superAdminAuth = require('../middleware/superAdminAuth')
 router.use("/guards",guardRoutes)
 router.use("/assignments",assignmentRoutes)
