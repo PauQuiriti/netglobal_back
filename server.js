@@ -1,4 +1,5 @@
 const express = require("express");
+require('dotenv').config()
 const app = express();
 const morgan = require("morgan");
 const db = require("./db/index");
@@ -6,11 +7,13 @@ const cors = require("cors");
 const helmet = require("helmet")
 const models = require("./models/index");
 const routes = require('./routes');
-const multer = require('multer')
-require('dotenv').config()
-const port = process.env.PORT || 3001
+
+
+const port = process.env.PORT || 5432
 app.use(helmet())
-app.use(cors());
+app.use(cors({
+  origin: "https://netglobal-security.netlify.app"
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan("tiny"));
@@ -22,3 +25,4 @@ db.sync({ force: false}).then(() => {
     console.log(`listening port: ${port}`);
   });
 });
+
