@@ -48,7 +48,7 @@ class AdminServices{
       if(body.street && body.number && body.location){
         let city; 
         city = body.location.split(" ").join("+")
-        let geoloc = await axios.get(`http://www.mapquestapi.com/geocoding/v1/address?key=Hi8xaDQPxjO4mTdYh4yk4sfa5ewyjKcd&street=${body.number}+${body.street}&city=${city}&country=AR`)
+        let geoloc = await axios.get(`http://www.mapquestapi.com/geocoding/v1/address?key=Hi8xaDQPxjO4mTdYh4yk4sfa5ewyjKcd&street=${body.number}+${body.street}&city=${city}&postalcode=${body.postalcode}&country=AR`)
         let coordinates = geoloc.data.results[0].locations[0].latLng
         let reverseGeoloc = await axios.get(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${coordinates.lat}&lon=${coordinates.lng}&zoom=18&addressdetails=1`)
         let street = geoloc.data.results[0].locations[0].street

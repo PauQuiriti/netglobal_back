@@ -9,11 +9,12 @@ const models = require("./models/index");
 const routes = require('./routes');
 
 
-const port = process.env.PORT || 5432
+const port = 3001
 app.use(helmet())
-app.use(cors({
-  origin: "https://netglobal-security.netlify.app"
-}));
+app.use(cors(
+  {
+   origin: "https://netglobal-security.netlify.app"
+ }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan("tiny"));

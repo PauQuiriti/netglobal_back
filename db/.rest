@@ -50,37 +50,37 @@
 # }
 
 
-# POST http://localhost:3001/register/guard HTTP/1.1
-# Content-Type: application/json
+POST http://localhost:3001/register/guard HTTP/1.1
+Content-Type: application/json
 
-# {
-#     "name": "Adrian",
-#     "lastName": "Dargelos",
-#     "email": "adrian@mail.com",
-#     "password": "babasonicos",
-#     "cuil": 20292888539 ,
-#     "street": "Rivadavia",
-#     "number": 1500,
-#     "location": "Mar del Plata",
-#     "province": "Buenos Aires",
-#     "licenses": [1,2,3],
-#     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWJZ5siu5WGxaBncx_93IrlopwCvagBJN2tA&usqp=CAU"
-# }
+{
+    "name": "Adrian",
+    "lastName": "Dargelos",
+    "email": "adrian@mail.com",
+    "password": "babasonicos",
+    "cuil": 20292888539 ,
+    "street": "Rivadavia",
+    "number": 1500,
+    "location": "Mar del Plata",
+    "province": "Buenos Aires",
+    "licenses": [1,2,3],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWJZ5siu5WGxaBncx_93IrlopwCvagBJN2tA&usqp=CAU"
+}
 
 
 
 //INACTIVIDADES
 
 
-# POST http://localhost:3001/inactivities/guard/1 HTTP/1.1
-# Content-Type: application/json
+POST http://localhost:3001/inactivities/guard/1 HTTP/1.1
+Content-Type: application/json
 
-# {
-#   "startDate": "2022-07-08",
-#   "endDate": "2022-07-12",
-#   "detail": "Baja por enfermedad"
+{
+  "startDate": "2022-07-08",
+  "endDate": "2022-07-12",
+  "detail": "Baja por enfermedad"
 
-# }
+}
 
 
 # POST http://localhost:3001/inactivities/guard/2 HTTP/1.1
@@ -95,16 +95,16 @@
 # }
 
 
-# POST http://localhost:3001/inactivities/guard/1 HTTP/1.1
-# Content-Type: application/json
+ POST http://localhost:3001/inactivities/guard/1 HTTP/1.1
+ Content-Type: application/json
 
-# {
-#   "state":"REJECTED",
-#   "startDate": "2022-07-20",
-#   "endDate": "2022-07-22",
-#   "detail": "Baja por familiar enfermo"
+ {
+   "state":"REJECTED",
+   "startDate": "2022-07-20",
+   "endDate": "2022-07-22",
+   "detail": "Baja por familiar enfermo"
 
-# }
+ }
 
 POST http://localhost:3001/assignments HTTP/1.1
 Content-Type: application/json

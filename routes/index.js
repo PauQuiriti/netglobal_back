@@ -12,8 +12,6 @@ const BranchController = require('../controllers/branchController');
 const AdminController = require('../controllers/AdminController');
 const ProvinceController = require('../controllers/ProvinceController')
 const adminRoutes = require('./adminRoutes');
-const multer = require('multer');
-const upload = require('../middleware/upload');
 const superAdminAuth = require('../middleware/superAdminAuth')
 router.use("/guards",guardRoutes)
 router.use("/assignments",assignmentRoutes)
@@ -22,6 +20,10 @@ router.post("/login", AdminController.login)
 router.use("/company", companyRouter)
 router.use("/branch", branchesRouter)
 router.use("/admin", adminRoutes)
+router.get("/",(req,res)=>{
+    res.send('Hello,world')
+})
+
 //ruta para testear autorizacion 
 router.post("/auth", authAdmin)
 //search routes 
