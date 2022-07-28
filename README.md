@@ -28,3 +28,4 @@ Por otro lado encontramos una app que sera utilizada por los vigiladores donde e
 
 4) En la carpeta de routes se encuentra un archivo routes.txt con las direcciones, los parametros a enviar y la respuesta de cada ruta. 
 
+# Backend-NetGlobal
